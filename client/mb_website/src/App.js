@@ -8,12 +8,15 @@ import { useMediaQuery } from 'react-responsive';
 import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
 import IsMobile from './IsMobile';
+import HouseArticle from './HouseArticle';
+import Footer from './Footer';
+import './App.css';
 
 function App() {
   const isMobile = IsMobile();
 
   return (
-    <Router>
+    <Router basename="/mb_website">
       <div className="App">
         <div>
           {isMobile ? <MobileNavbar /> : <DesktopNavbar />}
@@ -21,13 +24,14 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/recommendations" element={<Recommendations />} />
-            <Route path="/about"  element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            {/* <Route path="/house-rennovation" element={<HouseArticle />} /> */}
+            <Route path="gallery" element={<Gallery />} />
+            <Route path="recommendations" element={<Recommendations />} />
+            <Route path="about"  element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="house-rennovation" element={<HouseArticle />} />
           </Routes>
         </div>
+        <div className="footer"><Footer /></div>
       </div>
     </Router>
   );

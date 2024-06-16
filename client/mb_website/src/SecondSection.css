@@ -1,0 +1,49 @@
+/* SecondSection.css */
+
+.second-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.second-section-header {
+    margin-bottom: 20px;
+}
+
+.second-section-header h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.second-section-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.icon-link {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    background-color: #e0f7fa; /* Light cyan background */
+}
+
+.icon-link:hover {
+    color: #007bff;
+    background-color: #b2ebf2; /* Darker cyan on hover */
+    transform: scale(1.1);
+}
+
+.icon-link span {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}

@@ -65,7 +65,7 @@ const Gallery = () => {
           {categories.map((category) => (
             <div key={category.name} className="category-card" onClick={() => handleCategorySelect(category.name)}>
               <div className="category-image-wrapper">
-                <img src={`/${category.name}.jpg`} alt={`${category.displayName}`} className="category-image" />
+                <img src={`${process.env.PUBLIC_URL}/${category.name}.jpg`} alt={`${category.displayName}`} className="category-image" />
                 <div className="category-overlay">
                   <span className="category-title">{category.displayName}</span>
                 </div>

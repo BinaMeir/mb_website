@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons'; // Import the phone icon
 import logo from './logo.jpg'; // Adjust the path to your logo image
+import { Link } from 'react-router-dom';
 
 const DesktopNavbar = () => {
 
@@ -29,18 +30,19 @@ const DesktopNavbar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
         <Nav className="center-links">
-          <Nav.Link href="/gallery">גלריה</Nav.Link>
-          <Nav.Link href="/recommendations">המלצות</Nav.Link>
-          <NavDropdown title="שיפוץ דירה" id="basic-nav-dropdown" className="custom-dropdown">
-            <NavDropdown.Item href="#">מטבחים</NavDropdown.Item>
-            <NavDropdown.Item href="#">חדרי אמבטיה</NavDropdown.Item>
-            <NavDropdown.Item href="#">סלון</NavDropdown.Item>
+          <Nav.Link as={Link} to="gallery">גלריה</Nav.Link>
+          <Nav.Link as={Link} to="recommendations">המלצות</Nav.Link>
+          <NavDropdown title="שיפוץ כללי" id="basic-nav-dropdown" className="custom-dropdown">
+            <NavDropdown.Item as={Link} to="/house-rennovation/">שיפוץ דירה</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/house-rennovation#kitchen">מטבחים</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/house-rennovation#bathroom">חדרי אמבטיה</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/house-rennovation#living-room">סלון</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="/about">אודות</Nav.Link>
+          <Nav.Link as={Link} to="about">אודות</Nav.Link>
         </Nav>
       </Navbar.Collapse>
-      <Navbar.Brand href="/" className="custom-brand">
-          <img src={logo} alt="Logo" />
+      <Navbar.Brand as={Link} to="/" className="custom-brand">
+        <img src={logo} alt="Logo" />
       </Navbar.Brand>
     </Navbar>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import './FirstSection.css';
 import IsMobile from './IsMobile';
 import Contact from './Contact';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const FirstSection = () => {
     const isMobile = IsMobile();
@@ -10,8 +10,8 @@ const FirstSection = () => {
     return (
         <header className="first-section">
             <div className="first-section-content">
-                <h1>Transforming Homes with Excellence</h1>
-                <p>Specializing in Kitchen, Bathroom, and Whole House Renovations</p>
+                <h1>מיכאל שיפוצים</h1>
+                <p>אנחנו נרוויח אתם תשלמו</p>
             </div>
             {isMobile ? (
                 <div className="contact-button-container">

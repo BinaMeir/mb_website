@@ -1,0 +1,72 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top in the footer */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-logo img {
+    max-width: 300px;
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px;
+    margin-bottom: 20px; /* Add bottom margin for spacing in mobile view */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    text-align: left; /* Align text to the left for readability */
+    flex-wrap: wrap; /* Ensure the footer columns wrap in smaller screens */
+    gap: 20px; /* Add gap between columns for better spacing */
+}
+
+.footer-column {
+    margin: 0 20px;
+    max-width: 200px; /* Restrict width for a cleaner layout */
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    color: #f1f1f1;
+}
+
+.footer-column a {
+    display: block;
+    margin-bottom: 8px;
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.footer-column p {
+    margin: 0;
+    color: #ddd;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Switch to column layout for mobile */
+        align-items: center;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+
+    .footer-column {
+        margin: 10px 0;
+        text-align: center; /* Center text for better mobile aesthetics */
+    }
+}

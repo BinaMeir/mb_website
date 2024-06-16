@@ -1,0 +1,30 @@
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  nav {
+    background-color: #f4f4f4;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 1em;
+  }
+  
+  section {
+    margin-bottom: 2em;
+  }
+  
+  section h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5em;
+  }
+  
