@@ -11,7 +11,7 @@ const FirstSection = () => {
         <header className="first-section">
             <div className="first-section-content">
                 <h1>מיכאל שיפוצים</h1>
-                <p>אנחנו נרוויח אתם תשלמו</p>
+                <p>שיפוץ מושלם לאנשים מושלמים</p>
             </div>
             {isMobile ? (
                 <div className="contact-button-container">
