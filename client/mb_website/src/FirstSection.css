@@ -105,9 +105,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-    main {
-        padding: 10px;
-    }
 
     .contact-button {
         padding: 10px 20px; /* Increase padding */

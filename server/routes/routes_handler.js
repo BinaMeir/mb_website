@@ -37,7 +37,9 @@ module.exports = {
             const newClient = new Client(temp_client);
         
             // Save the new client and await the promise
-            const savedClient = await newClient.save();
+            const savedClient = await newClient.save()
+              .then(() => console.log('Document saved'))
+              .catch(err => console.error('Save error:', err));
         
             // Send a success response with the newly created client
             res.status(201).send(savedClient);

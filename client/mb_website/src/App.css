@@ -14,7 +14,6 @@ html, body, #root {
   
   .content {
     flex: 1; /* Makes the content grow to fill the available space */
-    padding: 20px; /* Add some padding for better visuals */
   }
   
   .footer {
