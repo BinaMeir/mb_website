@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import './Images.css'; // Ensure you have this file for custom CSS
 
 const Images = ({ imageList }) => {
@@ -11,15 +11,17 @@ const Images = ({ imageList }) => {
     return blob;
   }
 
-  const handleNextImage = () => {
+  // Memoize the handleNextImage function
+  const handleNextImage = useCallback(() => {
     setSelectedImageIndex((prevIndex) => (prevIndex + 1) % imageList.length);
-  };
+  }, [imageList.length]);
 
-  const handlePrevImage = () => {
+  // Memoize the handlePrevImage function
+  const handlePrevImage = useCallback(() => {
     setSelectedImageIndex((prevIndex) =>
       prevIndex === 0 ? imageList.length - 1 : prevIndex - 1
     );
-  };
+  }, [imageList.length]);
 
   const handleTouchStart = (e) => {
     setStartX(e.touches[0].clientX);
@@ -57,7 +59,7 @@ const Images = ({ imageList }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [selectedImageIndex]);
+  }, [selectedImageIndex, handleNextImage, handlePrevImage]);
 
   if (imageList == null) {
     return <div>Sorry, this gallery is empty</div>;

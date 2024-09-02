@@ -4,7 +4,6 @@ import Gallery from './Gallery';
 import Recommendations from './Recommendations';
 import About from './About';
 import Contact from './Contact'
-import { useMediaQuery } from 'react-responsive';
 import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
 import IsMobile from './IsMobile';

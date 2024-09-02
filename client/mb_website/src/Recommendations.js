@@ -16,13 +16,6 @@ useEffect(() => {
 
         setImages(recImages.data);
         console.log(recImages)
-        if (images != null) {
-            console.log("images are here!")
-        }
-        else{
-            console.log("images are not here!")
-        }
-
         setLoading(false);
       } catch (error) {
         setError(error);

@@ -1,10 +1,9 @@
 const express = require('express');
-const multer  = require('multer')
-const upload = multer()
 const app = express();
 const path = require('path');
 require('./db/mongoose');
 const cors = require('cors');
+require('dotenv').config();
 const PORT = process.env.PORT || 5000;
 
 
@@ -12,11 +11,13 @@ const PORT = process.env.PORT || 5000;
 const mainRouter = require('./routes/mainRouter');
 
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? 'https://your-app.herokuapp.com'  // Replace with your Heroku app's URL
-    : process.env.CLIENT_ORIGIN,         // Local development
+  origin: 'http://localhost:3000',         // Local development
   optionsSuccessStatus: 200
 }));
+
+console.log('CORS origin:', process.env.NODE_ENV === 'production' ? 'https://your-app.herokuapp.com' : process.env.CLIENT_ORIGIN);
+console.log('NODE_ENV:', process.env.NODE_ENV);
+console.log('CLIENT_ORIGIN:', process.env.CLIENT_ORIGIN);
 
 // Middleware to parse JSON request bodies
 app.use(express.json());
