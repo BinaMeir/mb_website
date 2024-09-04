@@ -2,25 +2,17 @@
     "version": 2,
     "builds": [
       {
-        "src": "client/mb_website/package.json",
+        "src": "client/package.json",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "client/mb_website/build"
+          "distDir": "client/build"
         }
-      },
-      {
-        "src": "server/package.json",
-        "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/server/$1"
-      },
-      {
         "src": "/(.*)",
-        "dest": "/client/mb_website/build/$1"
+        "dest": "/client/build/$1"
       }
     ]
   }

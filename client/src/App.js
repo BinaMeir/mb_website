@@ -15,7 +15,7 @@ function App() {
   const isMobile = IsMobile();
 
   return (
-    <Router basename="/mb_website">
+    <Router>
       <div className="App">
         <div>
           {isMobile ? <MobileNavbar /> : <DesktopNavbar />}

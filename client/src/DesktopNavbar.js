@@ -10,8 +10,8 @@ import { Link } from 'react-router-dom';
 
 const DesktopNavbar = () => {
 
-  const whatsappNumber = '+972548439982'; // Replace with the owner's phone number
-  const phoneNumber = '+972515887084'; // Replace with the owner's phone number
+  const whatsappNumber = '+972548439982';
+  const phoneNumber = '+972515887084';
   const message = 'Hello, I would like to contact you regarding your website.';
   const encodedMessage = encodeURIComponent(message);
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
